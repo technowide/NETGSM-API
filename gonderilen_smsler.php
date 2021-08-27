@@ -7,8 +7,12 @@
 
  $username = "****"; // API Kullanıcı Adı
  $password = urlencode("****"); // API Şifre
+ $version = "2";
+ $status = "1";
+ $type = "2";
+ $bulk_id = "1,2,3,4,5,6,7";
 
-  $url= "https://api.netgsm.com.tr/sms/report/?usercode=$username&password=$password&bulkid=1,2,3,4,5,6,7&type=2&status=1&version=2";
+ $url= "https://api.netgsm.com.tr/sms/report/?usercode=$username&password=$password&$bulk_id&$type&$status&$version&";
 
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
